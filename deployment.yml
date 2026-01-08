@@ -8,15 +8,15 @@ spec:
     matchLabels:
       app: dm
   template:
-      metadata:
-        labels:
-          app: dm
-      spec:
-        containers:
-          - name: cont1
-            image: 978163710174.dkr.ecr.us-west-1.amazonaws.com/rajeshtest:${BUILD_NUMBER}
-            ports:
-              - containerPort: 80
+    metadata:
+      labels:
+        app: dm
+    spec:
+      containers:
+        - name: cont1
+          image: 978163710174.dkr.ecr.us-west-1.amazonaws.com/rajeshtest:IMAGE_TAG
+          ports:
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
